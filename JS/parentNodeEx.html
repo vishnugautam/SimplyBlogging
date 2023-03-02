@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li id="myLi">Water</li>
+      <li>Coffee</li>
+      <li>Tea</li>
+    </ul>
+    <p id="para"></p>
+    <script id="myScript"></script>
+    <p id="para1"></p>
+    <script>
+      let name = document.getElementById("myLi").parentNode.nodeName;
+      document.getElementById("para").innerHTML = name;
+
+      let scriptOld = document.getElementById("myScript").parentNode.nodeName;
+      document.getElementById("para").innerHTML = scriptOld;
+    </script>
+  </body>
+</html>

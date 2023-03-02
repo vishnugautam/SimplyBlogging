@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="myList">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+  </body>
+  <script>
+    const newNode = document.createTextNode("Water");
+    const element = document.getElementById("myList").children[0];
+    //.children will return coffee, tea, milk
+    //.children[0] will return coffee
+    // console.log(element.childNodes); will return the whole NodeList and childNodes[0] will return the text which is coffee
+    // console.log(typeof element); is an object so we have to
+    // console.log(element.innerHTML);
+    element.replaceChild(newNode, element.childNodes[0]);
+    // console.log(element);
+  </script>
+</html>

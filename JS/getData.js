@@ -15,7 +15,12 @@ function getData() {
 
   let title = document.forms["myForm"]["title"].value;
   let description = document.forms["myForm"]["description"].value;
-  let image = document.getElementById("image").value;
+  // let image  = document.getElementById("image").value but it produced an not allowed to load local resource img src error
+  // Not allowed to load local resource: file:///C:/fakepath/cat.jfif
+  let image = document.getElementById("image").files[0].name;
+
+  image = "../images/" + image;
+  console.log(image);
 
   const obj = new Blog(title, description, image);
   var data = JSON.parse(sessionStorage.getItem("apiResult") || "[]");
